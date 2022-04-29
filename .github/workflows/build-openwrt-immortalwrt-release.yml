@@ -6,7 +6,7 @@ env:
 on:
   push:
     branches:
-      - dev1
+      - master
   workflow_dispatch:
   schedule:
     # * is a special character in YAML so you have to quote this string
@@ -20,7 +20,7 @@ jobs:
 
     steps:
       - name: Clone Repository
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Build Environment Initialization
         run: |
